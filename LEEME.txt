@@ -1,0 +1,11 @@
+MINI POPET · versión Google Drive
+
+Este paquete NO contiene los PDFs.
+Los 11 catálogos se cargan desde Google Drive mediante /preview.
+
+Para que funcionen:
+1. Cada archivo de Drive debe tener acceso: "Cualquier persona con el enlace".
+2. Sube esta carpeta a Vercel.
+3. No es necesario subir los PDFs a Vercel.
+
+El archivo catalogos-drive.json contiene el mapeo de los 11 catálogos por si después necesitas sustituir un enlace.
