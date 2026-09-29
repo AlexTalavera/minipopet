@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINI POPET | Perfumes · Moda · Accesorios</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FAF6F0',
+                        'cream-card': '#FFFDF9',
+                        'cream-dark': '#F0E8DF',
+                        chocolate: '#3D2314',
+                        'chocolate-light': '#5A3925',
+                        'soft-black': '#1A1817',
+                        'dusty-rose': '#E8D3CE',
+                        'dusty-rose-light': '#F4EAE7',
+                        'dusty-rose-dark': '#C89B93',
+                        'vintage-gold': '#C5A059'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF6F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E8D3CE;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C89B93;
+        }
+        
+        .charm-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .charm-float-delayed {
+            animation: float 4s ease-in-out 2s infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-6px) rotate(3deg); }
+        }
+    </style>
+
+    <script>
+        function openWhatsApp(message) {
+            const phoneNumber = '5215635537476';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+    </script>
+</head>
+<body class="bg-cream text-soft-black font-sans antialiased selection:bg-dusty-rose selection:text-chocolate min-h-screen flex flex-col justify-between">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-dusty-rose-light border-b border-dusty-rose/40 text-chocolate text-[11px] sm:text-xs tracking-widest text-center py-2 px-4 uppercase font-semibold flex items-center justify-center gap-2">
+        <span class="text-dusty-rose-dark text-xs">✦</span>
+        <span>Atención personalizada & Entregas acordadas</span>
+        <span class="text-dusty-rose-dark text-xs">✦</span>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-dusty-rose/40 transition-all duration-300">
+        <div class="max-w-4xl mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
+            <a href="#" class="group flex items-center gap-1.5">
+                <span class="text-dusty-rose-dark group-hover:rotate-12 transition-transform duration-300">✦</span>
+                <span class="font-serif text-2xl sm:text-3xl font-bold tracking-wider text-chocolate">MINI POPET</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-medium text-chocolate/80">
+                <a href="#perfumes" class="hover:text-chocolate transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-chocolate hover:after:w-full after:transition-all">Perfumes</a>
+                <a href="#price-shoes" class="hover:text-chocolate transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-chocolate hover:after:w-full after:transition-all">Price Shoes</a>
+                <a href="#contacto" class="hover:text-chocolate transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-chocolate hover:after:w-full after:transition-all">Contacto</a>
+            </nav>
+
+            <!-- Direct WhatsApp Quick Button in Header -->
+            <button onclick="openWhatsApp('Hola MINI POPET, me gustaría pedir información general sobre sus productos.')" class="inline-flex items-center gap-2 bg-dusty-rose hover:bg-dusty-rose-dark text-chocolate px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-bold transition-all shadow-sm active:scale-95">
+                <svg class="w-3.5 h-3.5 fill-current text-chocolate" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                <span>WhatsApp</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-16 px-4 overflow-hidden">
+        <div class="absolute top-6 left-[8%] text-dusty-rose-dark/40 text-xl charm-float select-none pointer-events-none">✦</div>
+        <div class="absolute top-20 right-[10%] text-dusty-rose-dark/30 text-2xl charm-float-delayed select-none pointer-events-none">♡</div>
+        <div class="absolute bottom-8 left-[12%] text-dusty-rose-dark/30 text-lg charm-float-delayed select-none pointer-events-none">✨</div>
+        <div class="absolute bottom-12 right-[15%] text-dusty-rose-dark/40 text-xl charm-float select-none pointer-events-none">✦</div>
+
+        <div class="max-w-2xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dusty-rose/70 border border-dusty-rose-dark/40 text-chocolate text-[11px] uppercase tracking-widest mb-6 shadow-sm font-semibold">
+                <span class="text-chocolate">♡</span>
+                <span>Boutique Digital</span>
+                <span class="text-chocolate">♡</span>
+            </div>
+
+            <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-chocolate mb-3">
+                MINI POPET
+            </h1>
+
+            <p class="text-sm sm:text-base font-semibold tracking-widest uppercase text-chocolate/90 mb-6">
+                Perfumes · Moda · Accesorios
+            </p>
+
+            <div class="relative bg-cream-card p-6 sm:p-8 rounded-2xl border border-dusty-rose shadow-sm max-w-lg mx-auto my-6">
+                <div class="absolute top-2 left-2 text-dusty-rose-dark text-xs">✦</div>
+                <div class="absolute top-2 right-2 text-dusty-rose-dark text-xs">✦</div>
+                <div class="absolute bottom-2 left-2 text-dusty-rose-dark text-xs">✦</div>
+                <div class="absolute bottom-2 right-2 text-dusty-rose-dark text-xs">✦</div>
+
+                <p class="font-serif italic text-2xl sm:text-3xl text-chocolate font-semibold leading-relaxed">
+                    “Pequeños gustos, grandes favoritos.”
+                </p>
+            </div>
+
+            <p class="text-xs sm:text-sm text-soft-black/80 max-w-md mx-auto leading-relaxed mb-8 font-medium">
+                Bienvenida a nuestro espacio boutique. Aquí encontrarás una fina selección de perfumes originales y árabes, además de las mejores colecciones de Price Shoes.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#perfumes" class="bg-dusty-rose text-chocolate hover:bg-dusty-rose-dark px-6 py-3 rounded-full text-xs font-bold tracking-wider uppercase transition-all shadow-sm active:scale-95 flex items-center gap-2">
+                    <span>Ver Perfumes</span>
+                    <span class="text-chocolate">→</span>
+                </a>
+                <a href="#price-shoes" class="bg-cream-card border border-dusty-rose-dark/40 text-chocolate hover:bg-dusty-rose-light px-6 py-3 rounded-full text-xs font-bold tracking-wider uppercase transition-all shadow-sm active:scale-95 flex items-center gap-2">
+                    <span>Price Shoes</span>
+                    <span class="text-chocolate">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="flex items-center justify-center gap-3 max-w-xs mx-auto my-4 text-dusty-rose-dark opacity-80">
+        <div class="h-[1px] bg-dusty-rose-dark/40 flex-1"></div>
+        <span class="text-xs text-chocolate">✦ ♡ ✦</span>
+        <div class="h-[1px] bg-dusty-rose-dark/40 flex-1"></div>
+    </div>
+
+    <!-- SECTION 1: PERFUMES -->
+    <section id="perfumes" class="py-12 sm:py-16 px-4 bg-cream-card/50">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="text-center mb-10">
+                <span class="text-xs uppercase tracking-widest text-dusty-rose-dark font-bold">Colección 01</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-chocolate mt-1 mb-3">
+                    Perfumería Seleccionada
+                </h2>
+                <div class="inline-block bg-dusty-rose/60 px-4 py-1.5 rounded-full border border-dusty-rose-dark/30">
+                    <p class="text-xs sm:text-sm font-semibold text-chocolate tracking-wide">
+                        Originales · Árabes · Mujer · Hombre · Unisex
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                
+                <!-- Card 1: Perfumes Árabes -->
+                <div class="bg-cream-card border border-dusty-rose/80 rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group relative overflow-hidden">
+                    <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-dusty-rose/30 rounded-full blur-xl group-hover:bg-dusty-rose/50 transition-all"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xl text-dusty-rose-dark">✨</span>
+                            <span class="text-[10px] tracking-widest uppercase bg-dusty-rose-light px-2.5 py-1 rounded-full text-chocolate font-bold">Tendencia Top</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-chocolate mb-2">Perfumes Árabes</h3>
+                        <p class="text-xs text-soft-black/80 leading-relaxed mb-4 font-medium">
+                            Fragancias con proyección extraordinaria, fijación de larga duración y notas exóticas de oud, vainilla, ámbar y especias dulces.
+                        </p>
+                        <ul class="text-xs text-chocolate space-y-1.5 mb-6 font-semibold">
+                            <li class="flex items-center gap-2">
+                                <span class="text-dusty-rose-dark text-[10px]">✦</span> Lattafa, Armaf, Maison Alhambra, Club de Nuit
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-dusty-rose-dark text-[10px]">✦</span> Aromas dulces, gourmand, amaderados y florales
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="openCatalogModal('perfumes_arabes')" class="w-full bg-dusty-rose hover:bg-dusty-rose-dark text-chocolate py-3.5 rounded-xl text-xs uppercase tracking-widest font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+                        <span>VER CATÁLOGO</span>
+                        <span class="text-chocolate text-xs">✦</span>
+                    </button>
+                </div>
+
+                <!-- Card 2: Perfumes Originales -->
+                <div class="bg-cream-card border border-dusty-rose/80 rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group relative overflow-hidden">
+                    <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-dusty-rose/30 rounded-full blur-xl group-hover:bg-dusty-rose/50 transition-all"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xl text-dusty-rose-dark">♡</span>
+                            <span class="text-[10px] tracking-widest uppercase bg-dusty-rose-light px-2.5 py-1 rounded-full text-chocolate font-bold">100% Auténticos</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-chocolate mb-2">Originales de Diseñador</h3>
+                        <p class="text-xs text-soft-black/80 leading-relaxed mb-4 font-medium">
+                            Tus firmas favoritas con garantía de autenticidad. Encuentra tu esencia insignia para cada día u ocasión especial.
+                        </p>
+                        <ul class="text-xs text-chocolate space-y-1.5 mb-6 font-semibold">
+                            <li class="flex items-center gap-2">
+                                <span class="text-dusty-rose-dark text-[10px]">✦</span> Fragancias para Dama, Caballero y Unisex
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-dusty-rose-dark text-[10px]">✦</span> Presentaciones de caja sellada y bajo pedido
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="openCatalogModal('perfumes_originales')" class="w-full bg-dusty-rose hover:bg-dusty-rose-dark text-chocolate py-3.5 rounded-xl text-xs uppercase tracking-widest font-bold transition-all flex items-center justify-center gap-2 shadow-sm">
+                        <span>VER CATÁLOGO</span>
+                        <span class="text-chocolate text-xs">✦</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Quick Inquiry Box for Perfumes -->
+            <div class="bg-dusty-rose-light/80 border border-dusty-rose rounded-2xl p-5 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="text-left">
+                    <p class="font-serif text-lg font-bold text-chocolate">¿Buscas un perfume en específico?</p>
+                    <p class="text-xs text-chocolate/80 font-medium">Dime el nombre o las notas que te gustan y te envío opciones disponibles.</p>
+                </div>
+                <button onclick="openWhatsApp('Hola MINI POPET, busco un perfume en específico. Me gustaría consultar si lo tienen o pueden conseguirlo.')" class="w-full sm:w-auto whitespace-nowrap bg-cream-card border border-chocolate/40 text-chocolate hover:bg-dusty-rose px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-sm">
+                    Consultar Perfume
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="flex items-center justify-center gap-3 max-w-xs mx-auto my-4 text-dusty-rose-dark opacity-80">
+        <div class="h-[1px] bg-dusty-rose-dark/40 flex-1"></div>
+        <span class="text-xs text-chocolate">✦ ♡ ✦</span>
+        <div class="h-[1px] bg-dusty-rose-dark/40 flex-1"></div>
+    </div>
+
+    <!-- SECTION 2: PRICE SHOES -->
+    <section id="price-shoes" class="py-12 sm:py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="text-center mb-10">
+                <span class="text-xs uppercase tracking-widest text-dusty-rose-dark font-bold">Colección 02</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-chocolate mt-1 mb-3">
+                    Price Shoes
+                </h2>
+                <div class="inline-block bg-dusty-rose/60 px-4 py-1.5 rounded-full border border-dusty-rose-dark/30">
+                    <p class="text-xs sm:text-sm font-semibold text-chocolate tracking-wide">
+                        Calzado · Ropa · Bolsas · Accesorios y más
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8">
+                <div class="bg-cream-card border border-dusty-rose/60 rounded-xl p-4 text-center hover:border-dusty-rose-dark transition-all shadow-sm">
+                    <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-dusty-rose-light flex items-center justify-center text-chocolate text-lg font-serif">👠</div>
+                    <h4 class="font-serif font-bold text-chocolate text-sm sm:text-base">Calzado</h4>
+                    <p class="text-[11px] text-soft-black/70 font-medium mt-1">Dama, Caballero e Infantil</p>
+                </div>
+
+                <div class="bg-cream-card border border-dusty-rose/60 rounded-xl p-4 text-center hover:border-dusty-rose-dark transition-all shadow-sm">
+                    <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-dusty-rose-light flex items-center justify-center text-chocolate text-lg font-serif">👗</div>
+                    <h4 class="font-serif font-bold text-chocolate text-sm sm:text-base">Ropa</h4>
+                    <p class="text-[11px] text-soft-black/70 font-medium mt-1">Temporada & Básicos</p>
+                </div>
+
+                <div class="bg-cream-card border border-dusty-rose/60 rounded-xl p-4 text-center hover:border-dusty-rose-dark transition-all shadow-sm">
+                    <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-dusty-rose-light flex items-center justify-center text-chocolate text-lg font-serif">👜</div>
+                    <h4 class="font-serif font-bold text-chocolate text-sm sm:text-base">Bolsas</h4>
+                    <p class="text-[11px] text-soft-black/70 font-medium mt-1">Bolsas y Mochilas</p>
+                </div>
+
+                <div class="bg-cream-card border border-dusty-rose/60 rounded-xl p-4 text-center hover:border-dusty-rose-dark transition-all shadow-sm">
+                    <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-dusty-rose-light flex items-center justify-center text-chocolate text-lg font-serif">✨</div>
+                    <h4 class="font-serif font-bold text-chocolate text-sm sm:text-base">Accesorios</h4>
+                    <p class="text-[11px] text-soft-black/70 font-medium mt-1">Detalles & Más</p>
+                </div>
+            </div>
+
+            <div class="bg-dusty-rose-light/90 border-2 border-dusty-rose/70 text-chocolate rounded-2xl p-6 sm:p-8 text-center relative overflow-hidden shadow-sm">
+                <div class="absolute top-3 left-3 text-dusty-rose-dark/50 text-lg">✦</div>
+                <div class="absolute bottom-3 right-3 text-dusty-rose-dark/50 text-lg">✦</div>
+
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold mb-3 text-chocolate">
+             
