@@ -91,7 +91,7 @@
         <h1 class="sr-only">MINI POPET Boutique Digital</h1>
         <p class="max-w-2xl mx-auto mt-7 text-sm sm:text-base leading-7 text-ink/70">Explora los catálogos vigentes, encuentra lo que te gusta y escríbenos para confirmar disponibilidad o hacer tu pedido.</p>
         <div class="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="#catalogos" class="rounded-full bg-chocolate text-paper px-6 py-3 text-xs uppercase tracking-[.14em] font-bold hover:-translate-y-0.5 transition shadow-soft">Ver catálogos</a>
+          <a href="#catalogos" class="rounded-full bg-chocolate text-paper px-6 py-3 text-xs uppercase tracking-[.14em] font-bold hover:-translate-y-0.5 transition shadow-soft">Abrir catálogos</a>
           <button onclick="openWhatsApp('Hola MINI POPET, ¿me ayudan a encontrar un producto?')" class="rounded-full bg-paper border border-rose-deep/35 text-chocolate px-6 py-3 text-xs uppercase tracking-[.14em] font-bold hover:bg-rose-soft transition">Ayúdame a elegir</button>
         </div>
       </div>
@@ -216,27 +216,7 @@
     </div>
   </footer>
 
-  <dialog id="catalogModal" class="w-[96vw] h-[94vh] max-w-6xl rounded-[1.4rem] p-0 bg-paper shadow-2xl overflow-hidden">
-    <div class="h-full flex flex-col">
-      <div class="flex items-center justify-between gap-3 px-4 sm:px-5 py-3 border-b border-rose/70 bg-paper">
-        <div class="min-w-0"><p class="text-[10px] uppercase tracking-[.16em] text-rose-deep font-bold">Catálogo digital</p><h3 id="modalTitle" class="font-serif text-xl sm:text-2xl font-bold text-chocolate truncate"></h3></div>
-        <div class="flex items-center gap-2 shrink-0">
-          <a id="openPdfNew" href="#" target="_blank" rel="noopener" class="hidden sm:inline-flex rounded-full border border-rose-deep/30 px-4 py-2 text-xs font-bold text-chocolate hover:bg-rose-soft">Abrir aparte ↗</a>
-          <button onclick="closeCatalog()" class="w-10 h-10 rounded-full border border-rose-deep/30 text-chocolate hover:bg-rose-soft text-lg" aria-label="Cerrar catálogo">×</button>
-        </div>
-      </div>
-      <div class="flex-1 bg-[#ece8e4] relative">
-        <div class="absolute inset-x-0 top-0 z-0 text-center text-[11px] text-ink/45 py-3 pointer-events-none">
-          Cargando catálogo desde Google Drive…
-        </div>
-        <iframe id="catalogFrame" title="Visor de catálogo PDF" class="relative z-10 w-full h-full border-0 bg-transparent" loading="lazy" allow="autoplay"></iframe>
-      </div>
-      <div class="sm:hidden flex gap-2 p-3 border-t border-rose/70 bg-paper">
-        <a id="openPdfMobile" href="#" target="_blank" rel="noopener" class="flex-1 text-center rounded-full border border-rose-deep/30 px-4 py-2.5 text-xs font-bold text-chocolate">Abrir PDF ↗</a>
-        <button onclick="openWhatsApp('Hola MINI POPET, estoy viendo un catálogo y quiero consultar un producto.')" class="flex-1 rounded-full bg-chocolate text-paper px-4 py-2.5 text-xs font-bold">WhatsApp</button>
-      </div>
-    </div>
-  </dialog>
+  
 
   <script>
     const phoneNumber = '5215635537476';
@@ -267,29 +247,13 @@
       });
     });
 
-    const modal = document.getElementById('catalogModal');
-    const frame = document.getElementById('catalogFrame');
     function openCatalog(title, fileId) {
-      const previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
       const viewUrl = `https://drive.google.com/file/d/${fileId}/view`;
-
-      document.getElementById('modalTitle').textContent = title;
-      document.getElementById('openPdfNew').href = viewUrl;
-      document.getElementById('openPdfMobile').href = viewUrl;
-      frame.src = previewUrl;
-
-      if (typeof modal.showModal === 'function') {
-        modal.showModal();
-      } else {
-        window.open(viewUrl, '_blank', 'noopener,noreferrer');
-      }
+      window.open(viewUrl, '_blank', 'noopener,noreferrer');
     }
     function closeCatalog() { modal.close(); frame.src = 'about:blank'; }
-    modal.addEventListener('click', e => {
-      const rect = modal.getBoundingClientRect();
       if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) closeCatalog();
     });
-    modal.addEventListener('close', () => frame.src = 'about:blank');
   </script>
 </body>
 </html>
