@@ -1,13 +1,8 @@
-MINI POPET · versión Google Drive directa
+MINI POPET · Mapeo Google Drive corregido
 
-Este paquete NO contiene los PDFs.
+Los 11 enlaces fueron verificados contra el nombre real de cada PDF en Google Drive.
 
-Funcionamiento:
-- Cada portada abre directamente el catálogo correspondiente en Google Drive.
-- No se usa visor embebido, para evitar lentitud con PDFs pesados.
-- Los PDFs siguen alojados gratis en Google Drive.
+Esta versión NO utiliza previsualización embebida.
+Al hacer clic en cualquier catálogo, se abre directamente en Google Drive en una pestaña nueva.
 
-Importante:
-Cada archivo de Drive debe tener acceso "Cualquier persona con el enlace".
-
-Sube esta carpeta tal cual a Vercel.
+El archivo catalogos-drive.json contiene el mapeo correcto.
