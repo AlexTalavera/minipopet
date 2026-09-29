@@ -81,9 +81,8 @@
     <!-- Sticky Navigation -->
     <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-dusty-rose/40 transition-all duration-300">
         <div class="max-w-4xl mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
-            <a href="#" class="group flex items-center gap-1.5">
-                <span class="text-dusty-rose-dark group-hover:rotate-12 transition-transform duration-300">✦</span>
-                <span class="font-serif text-2xl sm:text-3xl font-bold tracking-wider text-chocolate">MINI POPET</span>
+            <a href="#" class="group flex items-center" aria-label="MINI POPET Boutique Digital">
+                <img src="./logo-minipopet-transparent.png" alt="Logo MINI POPET Boutique Digital" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" />
             </a>
 
             <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-medium text-chocolate/80">
@@ -116,9 +115,9 @@
                 <span class="text-chocolate">♡</span>
             </div>
 
-            <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-chocolate mb-3">
-                MINI POPET
-            </h1>
+            <div class="mb-4">
+                <img src="./logo-minipopet-transparent.png" alt="Logo MINI POPET Boutique Digital" class="w-full max-w-[560px] mx-auto object-contain" />
+            </div>
 
             <p class="text-sm sm:text-base font-semibold tracking-widest uppercase text-chocolate/90 mb-6">
                 Perfumes · Moda · Accesorios
@@ -301,4 +300,72 @@
                 <div class="absolute bottom-3 right-3 text-dusty-rose-dark/50 text-lg">✦</div>
 
                 <h3 class="font-serif text-2xl sm:text-3xl font-bold mb-3 text-chocolate">
-             
+                    Catálogo por encargo
+                </h3>
+                <p class="text-sm sm:text-base text-chocolate/85 max-w-2xl mx-auto leading-relaxed font-medium mb-6">
+                    Si buscas algún artículo de Price Shoes, compártenos qué necesitas y te ayudamos a revisarlo por mensaje.
+                </p>
+                <button onclick="openWhatsApp('Hola MINI POPET, me gustaría pedir información sobre artículos de Price Shoes. ¿Me comparten opciones disponibles?')" class="inline-flex items-center justify-center gap-2 bg-cream-card border border-chocolate/30 hover:bg-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition-all shadow-sm active:scale-95">
+                    <span>Solicitar información</span>
+                    <span>→</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="flex items-center justify-center gap-3 max-w-xs mx-auto my-4 text-dusty-rose-dark opacity-80">
+        <div class="h-[1px] bg-dusty-rose-dark/40 flex-1"></div>
+        <span class="text-xs text-chocolate">✦ ♡ ✦</span>
+        <div class="h-[1px] bg-dusty-rose-dark/40 flex-1"></div>
+    </div>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-12 sm:py-16 px-4 bg-cream-card/50">
+        <div class="max-w-3xl mx-auto text-center">
+            <span class="text-xs uppercase tracking-widest text-dusty-rose-dark font-bold">Contacto</span>
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-chocolate mt-1 mb-3">
+                Atención personalizada
+            </h2>
+            <p class="text-sm sm:text-base text-soft-black/80 max-w-xl mx-auto leading-relaxed mb-8 font-medium">
+                Escríbenos por WhatsApp para cotizaciones, disponibilidad, catálogos y pedidos.
+            </p>
+
+            <div class="bg-cream-card border border-dusty-rose rounded-2xl p-6 sm:p-8 shadow-sm max-w-2xl mx-auto">
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <button onclick="openWhatsApp('Hola MINI POPET, me gustaría pedir información general sobre sus productos.')" class="inline-flex items-center justify-center gap-2 bg-dusty-rose hover:bg-dusty-rose-dark text-chocolate px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition-all shadow-sm active:scale-95">
+                        <span>Escribir por WhatsApp</span>
+                    </button>
+                    <a href="#perfumes" class="inline-flex items-center justify-center gap-2 bg-cream-card border border-chocolate/30 hover:bg-dusty-rose-light text-chocolate px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition-all shadow-sm active:scale-95">
+                        <span>Ver perfumes</span>
+                    </a>
+                </div>
+                <p class="text-xs text-chocolate/70 mt-5 font-medium">
+                    Número de contacto: +52 1 56 3553 7476
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-auto border-t border-dusty-rose/40 bg-cream/80 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto px-4 py-6 text-center">
+            <img src="./logo-minipopet-transparent.png" alt="Logo MINI POPET Boutique Digital" class="h-16 w-auto mx-auto mb-3 object-contain" />
+            <p class="text-xs sm:text-sm tracking-[0.25em] uppercase text-chocolate/75 font-semibold mb-2">Boutique Digital</p>
+            <p class="text-xs text-soft-black/70">Perfumes · Moda · Accesorios</p>
+        </div>
+    </footer>
+
+    <script>
+        function openCatalogModal(type) {
+            const catalogMap = {
+                perfumes_arabes: '/catalogos/perfumes-arabes.pdf',
+                perfumes_originales: '/catalogos/perfumes-originales.pdf'
+            };
+            const catalogUrl = catalogMap[type];
+            if (!catalogUrl) return;
+            window.open(catalogUrl, '_blank', 'noopener,noreferrer');
+        }
+    </script>
+</body>
+</html>
