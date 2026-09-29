@@ -1,67 +1,45 @@
 {
-  "arabes-mujer": {
-    "title": "Perfumes Árabes · Mujer",
-    "source_filename": "CTN26_BRENDA_VILLEGAS_ARABE_DAMA.pdf",
+  "Perfumes Árabes · Mujer": {
     "drive_file_id": "1oyLlodQ09T3-vmFzh_n5G5vqf9ufAR5f",
     "drive_url": "https://drive.google.com/file/d/1oyLlodQ09T3-vmFzh_n5G5vqf9ufAR5f/view"
   },
-  "arabes-hombre": {
-    "title": "Perfumes Árabes · Hombre",
-    "source_filename": "CTN26_ARABE_BRENDA_VILLEGAS_CABALLERO.pdf",
+  "Perfumes Árabes · Hombre": {
     "drive_file_id": "1MWxDHj1IIXZ98_QKPXui6u7mqy8Hwb4a",
     "drive_url": "https://drive.google.com/file/d/1MWxDHj1IIXZ98_QKPXui6u7mqy8Hwb4a/view"
   },
-  "disenador-mujer": {
-    "title": "Perfumes de Diseñador · Mujer",
-    "source_filename": "CTN26_CVPERS_BRENDA_VILLEGAS_DAMA.pdf",
+  "Perfumes de Diseñador · Mujer": {
     "drive_file_id": "16aYxYvCwmdka0NMxG_Zb5U-aU5TjmUu9",
     "drive_url": "https://drive.google.com/file/d/16aYxYvCwmdka0NMxG_Zb5U-aU5TjmUu9/view"
   },
-  "disenador-hombre": {
-    "title": "Perfumes de Diseñador · Hombre",
-    "source_filename": "CTN26_CVPERS_BRENDA_VILLEGAS_CABALLERO(1).pdf",
+  "Perfumes de Diseñador · Hombre": {
     "drive_file_id": "1ogXcySu2V5We4kC0sp-xxyyYVw4hgpEo",
     "drive_url": "https://drive.google.com/file/d/1ogXcySu2V5We4kC0sp-xxyyYVw4hgpEo/view"
   },
-  "sandalias": {
-    "title": "Sandalias 2026",
-    "source_filename": "260800300271_1345376_20o260811.pdf",
+  "Sandalias 2026": {
     "drive_file_id": "1nXba0Htx_ee5QUOMf8iaxlrvtOc35gm0",
     "drive_url": "https://drive.google.com/file/d/1nXba0Htx_ee5QUOMf8iaxlrvtOc35gm0/view"
   },
-  "botas": {
-    "title": "Botas Otoño / Invierno 2026-27",
-    "source_filename": "260800300271_1345376_20260811.pdf",
+  "Botas Otoño / Invierno 2026-27": {
     "drive_file_id": "1kgB7Bv39CNT1BWEXqeFesBzHbMq0b5Wg",
     "drive_url": "https://drive.google.com/file/d/1kgB7Bv39CNT1BWEXqeFesBzHbMq0b5Wg/view"
   },
-  "urbano": {
-    "title": "Urbano Otoño / Invierno 2026",
-    "source_filename": "260800300271_1346256_20260811.pdf",
+  "Urbano Otoño / Invierno 2026": {
     "drive_file_id": "126rS1i6TSeZ3aUoEKWOqkC1xArml7vot",
     "drive_url": "https://drive.google.com/file/d/126rS1i6TSeZ3aUoEKWOqkC1xArml7vot/view"
   },
-  "importados": {
-    "title": "Importados Fall 2026",
-    "source_filename": "260800300271_1351248_20260822.pdf",
+  "Importados Fall 2026": {
     "drive_file_id": "1Qsg9HzVuoYQEQY8uSyuUwwdcYalWgJ7B",
     "drive_url": "https://drive.google.com/file/d/1Qsg9HzVuoYQEQY8uSyuUwwdcYalWgJ7B/view"
   },
-  "vestir-casual": {
-    "title": "Vestir Casual 25-26",
-    "source_filename": "260800300271_1333870_20260811.pdf",
+  "Vestir Casual 25-26": {
     "drive_file_id": "1WXYmKAE-3hh7ippK99wl7vaZwMiOlZ9G",
     "drive_url": "https://drive.google.com/file/d/1WXYmKAE-3hh7ippK99wl7vaZwMiOlZ9G/view"
   },
-  "todo-en-uno": {
-    "title": "Todo en Uno 2026",
-    "source_filename": "260800300271_1341289_20260811.pdf",
+  "Todo en Uno 2026": {
     "drive_file_id": "1aolxf65Ml_EL4yD-E-EIEMIG37Nf2kzg",
     "drive_url": "https://drive.google.com/file/d/1aolxf65Ml_EL4yD-E-EIEMIG37Nf2kzg/view"
   },
-  "escolar": {
-    "title": "Escolar 2026",
-    "source_filename": "260800300271_1345137_20260811.pdf",
+  "Escolar 2026": {
     "drive_file_id": "1CcVk8JiyauD89MVFMAjArGXLoPh223Rl",
     "drive_url": "https://drive.google.com/file/d/1CcVk8JiyauD89MVFMAjArGXLoPh223Rl/view"
   }

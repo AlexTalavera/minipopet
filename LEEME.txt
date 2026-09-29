@@ -1,8 +1,7 @@
-MINI POPET · Mapeo Google Drive corregido
+MINI POPET · enlaces corregidos
 
-Los 11 enlaces fueron verificados contra el nombre real de cada PDF en Google Drive.
-
-Esta versión NO utiliza previsualización embebida.
-Al hacer clic en cualquier catálogo, se abre directamente en Google Drive en una pestaña nueva.
-
-El archivo catalogos-drive.json contiene el mapeo correcto.
+- Los 11 catálogos son enlaces HTML directos a Google Drive.
+- Los botones de WhatsApp son enlaces HTML directos.
+- No hay previsualización de PDFs.
+- Drive y WhatsApp ya no dependen de JavaScript.
+- JavaScript se usa únicamente para filtros y movimiento del carrusel.
