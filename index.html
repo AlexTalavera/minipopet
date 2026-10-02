@@ -101,9 +101,9 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
           <div>
-            <span class="text-[10px] sm:text-xs uppercase tracking-[.2em] text-rose-deep font-bold">11 catálogos disponibles</span>
+            <span id="catalogCount" class="text-[10px] sm:text-xs uppercase tracking-[.2em] text-rose-deep font-bold">Cargando catálogos…</span>
             <h2 class="font-serif text-4xl sm:text-5xl font-bold text-chocolate mt-1">Encuentra tu catálogo</h2>
-            <p class="text-sm text-ink/65 mt-3 max-w-xl">Filtra por categoría y desliza las portadas. Al tocar una, el catálogo se abre directamente en Google Drive.</p>
+            <p class="text-sm text-ink/65 mt-3 max-w-xl">Los catálogos se actualizan automáticamente desde MINI POPET CMS. Filtra por categoría y toca una portada para abrirla en Google Drive.</p>
           </div>
           <div class="flex gap-2 lg:pb-1">
             <button class="rail-btn w-10 h-10 rounded-full border border-rose-deep/35 bg-paper hover:bg-rose-soft text-chocolate" onclick="scrollCatalogs(-1)" aria-label="Catálogos anteriores">←</button>
@@ -112,78 +112,23 @@
         </div>
 
         <div class="fade-edge -mx-2 px-2 overflow-hidden">
-          <div id="chips" class="flex gap-2 overflow-x-auto pb-3" style="scrollbar-width:none">
-            <button class="chip shrink-0 rounded-full border border-rose-deep/30 bg-paper px-4 py-2 text-xs font-bold text-chocolate transition" aria-pressed="true" data-filter="all">Todos</button>
-            <button class="chip shrink-0 rounded-full border border-rose-deep/30 bg-paper px-4 py-2 text-xs font-bold text-chocolate transition" aria-pressed="false" data-filter="perfumes">Perfumes</button>
-            <button class="chip shrink-0 rounded-full border border-rose-deep/30 bg-paper px-4 py-2 text-xs font-bold text-chocolate transition" aria-pressed="false" data-filter="calzado">Calzado</button>
-            <button class="chip shrink-0 rounded-full border border-rose-deep/30 bg-paper px-4 py-2 text-xs font-bold text-chocolate transition" aria-pressed="false" data-filter="moda">Moda</button>
-            <button class="chip shrink-0 rounded-full border border-rose-deep/30 bg-paper px-4 py-2 text-xs font-bold text-chocolate transition" aria-pressed="false" data-filter="escolar">Escolar</button>
-          </div>
+          <div id="chips" class="flex gap-2 overflow-x-auto pb-3" style="scrollbar-width:none"></div>
         </div>
 
         <div id="catalogRail" class="catalog-rail flex gap-4 sm:gap-5 overflow-x-auto pb-5 pt-2 -mx-4 px-4 sm:-mx-6 sm:px-6">
-
-          <article class="catalog-card group shrink-0 w-[76vw] max-w-[290px] sm:w-[280px]" data-category="perfumes" data-title="Perfumes Árabes · Mujer">
-            <a href="https://drive.google.com/file/d/1oyLlodQ09T3-vmFzh_n5G5vqf9ufAR5f/view" target="_blank" rel="noopener noreferrer" class="text-left w-full">
-              <div class="cover-wrap relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-rose-soft shadow-soft group-hover:shadow-lift group-hover:-translate-y-1 transition duration-300">
-                <img src="./catalogos/portadas/arabes-mujer.webp" alt="Portada catálogo Perfumes Árabes Mujer" class="w-full h-full object-cover" loading="lazy" />
-                <span class="absolute z-10 bottom-4 left-4 rounded-full bg-paper/90 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[.14em] font-bold text-chocolate">Perfumes</span>
-              </div>
-              <div class="pt-4 px-1"><p class="text-[10px] uppercase tracking-[.18em] text-rose-deep font-bold">Árabes · Mujer</p><h3 class="font-serif text-2xl font-bold text-chocolate mt-1">Perfumes Árabes</h3><p class="text-xs text-ink/60 mt-1">Fragancias femeninas y orientales</p></div>
-            </a>
-          </article>
-
-          <article class="catalog-card group shrink-0 w-[76vw] max-w-[290px] sm:w-[280px]" data-category="perfumes" data-title="Perfumes Árabes · Hombre">
-            <a href="https://drive.google.com/file/d/1MWxDHj1IIXZ98_QKPXui6u7mqy8Hwb4a/view" target="_blank" rel="noopener noreferrer" class="text-left w-full">
-              <div class="cover-wrap relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-rose-soft shadow-soft group-hover:shadow-lift group-hover:-translate-y-1 transition duration-300"><img src="./catalogos/portadas/arabes-hombre.webp" alt="Portada catálogo Perfumes Árabes Hombre" class="w-full h-full object-cover" loading="lazy" /><span class="absolute z-10 bottom-4 left-4 rounded-full bg-paper/90 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[.14em] font-bold text-chocolate">Perfumes</span></div>
-              <div class="pt-4 px-1"><p class="text-[10px] uppercase tracking-[.18em] text-rose-deep font-bold">Árabes · Hombre</p><h3 class="font-serif text-2xl font-bold text-chocolate mt-1">Perfumes Árabes</h3><p class="text-xs text-ink/60 mt-1">Fragancias masculinas y orientales</p></div>
-            </a>
-          </article>
-
-          <article class="catalog-card group shrink-0 w-[76vw] max-w-[290px] sm:w-[280px]" data-category="perfumes" data-title="Perfumes de Diseñador · Mujer">
-            <a href="https://drive.google.com/file/d/16aYxYvCwmdka0NMxG_Zb5U-aU5TjmUu9/view" target="_blank" rel="noopener noreferrer" class="text-left w-full">
-              <div class="cover-wrap relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-rose-soft shadow-soft group-hover:shadow-lift group-hover:-translate-y-1 transition duration-300"><img src="./catalogos/portadas/disenador-mujer.webp" alt="Portada catálogo Perfumes de Diseñador Mujer" class="w-full h-full object-cover" loading="lazy" /><span class="absolute z-10 bottom-4 left-4 rounded-full bg-paper/90 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[.14em] font-bold text-chocolate">Perfumes</span></div>
-              <div class="pt-4 px-1"><p class="text-[10px] uppercase tracking-[.18em] text-rose-deep font-bold">Diseñador · Mujer</p><h3 class="font-serif text-2xl font-bold text-chocolate mt-1">Perfumes Originales</h3><p class="text-xs text-ink/60 mt-1">Marcas y fragancias para mujer</p></div>
-            </a>
-          </article>
-
-          <article class="catalog-card group shrink-0 w-[76vw] max-w-[290px] sm:w-[280px]" data-category="perfumes" data-title="Perfumes de Diseñador · Hombre">
-            <a href="https://drive.google.com/file/d/1ogXcySu2V5We4kC0sp-xxyyYVw4hgpEo/view" target="_blank" rel="noopener noreferrer" class="text-left w-full">
-              <div class="cover-wrap relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-rose-soft shadow-soft group-hover:shadow-lift group-hover:-translate-y-1 transition duration-300"><img src="./catalogos/portadas/disenador-hombre.webp" alt="Portada catálogo Perfumes de Diseñador Hombre" class="w-full h-full object-cover" loading="lazy" /><span class="absolute z-10 bottom-4 left-4 rounded-full bg-paper/90 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[.14em] font-bold text-chocolate">Perfumes</span></div>
-              <div class="pt-4 px-1"><p class="text-[10px] uppercase tracking-[.18em] text-rose-deep font-bold">Diseñador · Hombre</p><h3 class="font-serif text-2xl font-bold text-chocolate mt-1">Perfumes Originales</h3><p class="text-xs text-ink/60 mt-1">Marcas y fragancias para hombre</p></div>
-            </a>
-          </article>
-
-          <article class="catalog-card group shrink-0 w-[76vw] max-w-[290px] sm:w-[280px]" data-category="calzado" data-title="Sandalias 2026">
-            <a href="https://drive.google.com/file/d/1nXba0Htx_ee5QUOMf8iaxlrvtOc35gm0/view" target="_blank" rel="noopener noreferrer" class="text-left w-full"><div class="cover-wrap relative aspect-[4/5] overflow-hidden rounded-[1.5rem] shadow-soft group-hover:shadow-lift group-hover:-translate-y-1 transition duration-300"><img src="./catalogos/portadas/sandalias.webp" alt="Portada catálogo Sandalias 2026" class="w-full h-full object-cover" loading="lazy" /><span class="absolute z-10 bottom-4 left-4 rounded-full bg-paper/90 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[.14em] font-bold text-chocolate">Calzado</span></div><div class="pt-4 px-1"><p class="text-[10px] uppercase tracking-[.18em] text-rose-deep font-bold">Price Shoes</p><h3 class="font-serif text-2xl font-bold text-chocolate mt-1">Sandalias 2026</h3><p class="text-xs text-ink/60 mt-1">Sandalias, plataformas y temporada</p></div></a>
-          </article>
-
-          <article class="catalog-card group shrink-0 w-[76vw] max-w-[290px] sm:w-[280px]" data-category="calzado" data-title="Botas Otoño / Invierno 2026-27">
-            <a href="https://drive.google.com/file/d/1kgB7Bv39CNT1BWEXqeFesBzHbMq0b5Wg/view" target="_blank" rel="noopener noreferrer" class="text-left w-full"><div class="cover-wrap relative aspect-[4/5] overflow-hidden rounded-[1.5rem] shadow-soft group-hover:shadow-lift group-hover:-translate-y-1 transition duration-300"><img src="./catalogos/portadas/botas.webp" alt="Portada catálogo Botas 2026-27" class="w-full h-full object-cover" loading="lazy" /><span class="absolute z-10 bottom-4 left-4 rounded-full bg-paper/90 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[.14em] font-bold text-chocolate">Calzado</span></div><div class="pt-4 px-1"><p class="text-[10px] uppercase tracking-[.18em] text-rose-deep font-bold">Otoño · Invierno</p><h3 class="font-serif text-2xl font-bold text-chocolate mt-1">Botas 2026-27</h3><p class="text-xs text-ink/60 mt-1">Botas, botines y estilos de temporada</p></div></a>
-          </article>
-
-          <article class="catalog-card group shrink-0 w-[76vw] max-w-[290px] sm:w-[280px]" data-category="calzado" data-title="Urbano Otoño / Invierno 2026">
-            <a href="https://drive.google.com/file/d/126rS1i6TSeZ3aUoEKWOqkC1xArml7vot/view" target="_blank" rel="noopener noreferrer" class="text-left w-full"><div class="cover-wrap relative aspect-[4/5] overflow-hidden rounded-[1.5rem] shadow-soft group-hover:shadow-lift group-hover:-translate-y-1 transition duration-300"><img src="./catalogos/portadas/urbano.webp" alt="Portada catálogo Urbano 2026" class="w-full h-full object-cover" loading="lazy" /><span class="absolute z-10 bottom-4 left-4 rounded-full bg-paper/90 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[.14em] font-bold text-chocolate">Calzado</span></div><div class="pt-4 px-1"><p class="text-[10px] uppercase tracking-[.18em] text-rose-deep font-bold">Street · Casual</p><h3 class="font-serif text-2xl font-bold text-chocolate mt-1">Urbano 2026</h3><p class="text-xs text-ink/60 mt-1">Dama, caballero, junior y niños</p></div></a>
-          </article>
-
-          <article class="catalog-card group shrink-0 w-[76vw] max-w-[290px] sm:w-[280px]" data-category="moda" data-title="Importados Fall 2026">
-            <a href="https://drive.google.com/file/d/1Qsg9HzVuoYQEQY8uSyuUwwdcYalWgJ7B/view" target="_blank" rel="noopener noreferrer" class="text-left w-full"><div class="cover-wrap relative aspect-[4/5] overflow-hidden rounded-[1.5rem] shadow-soft group-hover:shadow-lift group-hover:-translate-y-1 transition duration-300"><img src="./catalogos/portadas/importados.webp" alt="Portada catálogo Importados Fall 2026" class="w-full h-full object-cover" loading="lazy" /><span class="absolute z-10 bottom-4 left-4 rounded-full bg-paper/90 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[.14em] font-bold text-chocolate">Moda</span></div><div class="pt-4 px-1"><p class="text-[10px] uppercase tracking-[.18em] text-rose-deep font-bold">Marcas · Importados</p><h3 class="font-serif text-2xl font-bold text-chocolate mt-1">Importados Fall 2026</h3><p class="text-xs text-ink/60 mt-1">Calzado, ropa y marcas internacionales</p></div></a>
-          </article>
-
-          <article class="catalog-card group shrink-0 w-[76vw] max-w-[290px] sm:w-[280px]" data-category="calzado" data-title="Vestir Casual 25-26">
-            <a href="https://drive.google.com/file/d/1WXYmKAE-3hh7ippK99wl7vaZwMiOlZ9G/view" target="_blank" rel="noopener noreferrer" class="text-left w-full"><div class="cover-wrap relative aspect-[4/5] overflow-hidden rounded-[1.5rem] shadow-soft group-hover:shadow-lift group-hover:-translate-y-1 transition duration-300"><img src="./catalogos/portadas/vestir-casual.webp" alt="Portada catálogo Vestir Casual" class="w-full h-full object-cover" loading="lazy" /><span class="absolute z-10 bottom-4 left-4 rounded-full bg-paper/90 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[.14em] font-bold text-chocolate">Calzado</span></div><div class="pt-4 px-1"><p class="text-[10px] uppercase tracking-[.18em] text-rose-deep font-bold">Dama · Vestir</p><h3 class="font-serif text-2xl font-bold text-chocolate mt-1">Vestir Casual</h3><p class="text-xs text-ink/60 mt-1">Zapatillas y calzado para ocasiones</p></div></a>
-          </article>
-
-          <article class="catalog-card group shrink-0 w-[76vw] max-w-[290px] sm:w-[280px]" data-category="moda" data-title="Todo en Uno 2026">
-            <a href="https://drive.google.com/file/d/1aolxf65Ml_EL4yD-E-EIEMIG37Nf2kzg/view" target="_blank" rel="noopener noreferrer" class="text-left w-full"><div class="cover-wrap relative aspect-[4/5] overflow-hidden rounded-[1.5rem] shadow-soft group-hover:shadow-lift group-hover:-translate-y-1 transition duration-300"><img src="./catalogos/portadas/todo-en-uno.webp" alt="Portada catálogo Todo en Uno 2026" class="w-full h-full object-cover" loading="lazy" /><span class="absolute z-10 bottom-4 left-4 rounded-full bg-paper/90 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[.14em] font-bold text-chocolate">Moda</span></div><div class="pt-4 px-1"><p class="text-[10px] uppercase tracking-[.18em] text-rose-deep font-bold">Dama · Caballero · Accesorios</p><h3 class="font-serif text-2xl font-bold text-chocolate mt-1">Todo en Uno 2026</h3><p class="text-xs text-ink/60 mt-1">Calzado, ropa y accesorios en un catálogo</p></div></a>
-          </article>
-
-          <article class="catalog-card group shrink-0 w-[76vw] max-w-[290px] sm:w-[280px]" data-category="escolar" data-title="Escolar 2026">
-            <a href="https://drive.google.com/file/d/1CcVk8JiyauD89MVFMAjArGXLoPh223Rl/view" target="_blank" rel="noopener noreferrer" class="text-left w-full"><div class="cover-wrap relative aspect-[4/5] overflow-hidden rounded-[1.5rem] shadow-soft group-hover:shadow-lift group-hover:-translate-y-1 transition duration-300"><img src="./catalogos/portadas/escolar.webp" alt="Portada catálogo Escolar 2026" class="w-full h-full object-cover" loading="lazy" /><span class="absolute z-10 bottom-4 left-4 rounded-full bg-paper/90 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[.14em] font-bold text-chocolate">Escolar</span></div><div class="pt-4 px-1"><p class="text-[10px] uppercase tracking-[.18em] text-rose-deep font-bold">Niñas · Niños · Junior</p><h3 class="font-serif text-2xl font-bold text-chocolate mt-1">Escolar 2026</h3><p class="text-xs text-ink/60 mt-1">Calzado escolar e infantil</p></div></a>
-          </article>
-
+          <div id="catalogLoading" class="w-full rounded-3xl border border-rose/60 bg-paper p-8 text-center text-sm text-ink/55">
+            Cargando catálogos…
+          </div>
         </div>
-        <p id="emptyState" class="hidden text-center py-12 text-sm text-ink/60">No hay catálogos en esta categoría.</p>
+
+        <div id="emptyState" class="hidden mt-4 rounded-2xl border border-rose/60 bg-paper p-6 text-center">
+          <p class="font-serif text-xl font-bold text-chocolate">No hay catálogos activos en esta categoría.</p>
+        </div>
+
+        <div id="cmsError" class="hidden mt-5 rounded-2xl border border-rose-deep/30 bg-rose-soft p-5 text-center">
+          <p class="font-semibold text-chocolate">No pudimos cargar los catálogos en este momento.</p>
+          <p class="text-xs text-ink/60 mt-1">Puedes escribirnos por WhatsApp y con gusto te compartimos el catálogo.</p>
+        </div>
       </div>
     </section>
 
@@ -219,32 +164,182 @@
   
 
   <script>
+    const SHEET_ID = '1RogWOGtiuuCcwxli2sgLfREsmUvltF7b4G4OuWZ0j5k';
+    const SHEET_NAME = 'Catalogos';
+    const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`;
+
     const rail = document.getElementById('catalogRail');
+    const chips = document.getElementById('chips');
+    const catalogCount = document.getElementById('catalogCount');
+    const emptyState = document.getElementById('emptyState');
+    const cmsError = document.getElementById('cmsError');
+
+    let catalogs = [];
+    let activeFilter = 'all';
+
+    function escapeHtml(value = '') {
+      return String(value)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    function parseCSV(text) {
+      const rows = [];
+      let row = [], cell = '', quoted = false;
+
+      for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        const next = text[i + 1];
+
+        if (char === '"') {
+          if (quoted && next === '"') {
+            cell += '"';
+            i++;
+          } else {
+            quoted = !quoted;
+          }
+        } else if (char === ',' && !quoted) {
+          row.push(cell);
+          cell = '';
+        } else if ((char === '\n' || char === '\r') && !quoted) {
+          if (char === '\r' && next === '\n') i++;
+          row.push(cell);
+          if (row.some(v => v !== '')) rows.push(row);
+          row = [];
+          cell = '';
+        } else {
+          cell += char;
+        }
+      }
+
+      if (cell.length || row.length) {
+        row.push(cell);
+        if (row.some(v => v !== '')) rows.push(row);
+      }
+
+      return rows;
+    }
+
+    function normalize(value = '') {
+      return String(value).trim().toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+    }
+
+    function isActive(value) {
+      const v = String(value).trim().toLowerCase();
+      return ['true','verdadero','1','si','sí','yes','x'].includes(v);
+    }
+
+    function coverFallback(name, category) {
+      const initials = name.split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
+      return `
+        <div class="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-rose-soft via-paper to-rose px-6 text-center">
+          <span class="text-[10px] uppercase tracking-[.22em] font-bold text-rose-deep">${escapeHtml(category)}</span>
+          <span class="font-serif text-5xl font-bold text-chocolate/80 mt-4">${escapeHtml(initials || 'MP')}</span>
+          <span class="font-serif text-xl font-bold text-chocolate mt-3 leading-tight">${escapeHtml(name)}</span>
+        </div>`;
+    }
+
+    function cardTemplate(item) {
+      const cover = item.cover
+        ? `<img src="${escapeHtml(item.cover)}" alt="Portada ${escapeHtml(item.name)}" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')" />
+           <div class="hidden w-full h-full">${coverFallback(item.name, item.category)}</div>`
+        : coverFallback(item.name, item.category);
+
+      return `
+        <article class="catalog-card group shrink-0 w-[76vw] max-w-[290px] sm:w-[280px]" data-category="${escapeHtml(normalize(item.category))}">
+          <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="block text-left w-full">
+            <div class="cover-wrap relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-rose-soft shadow-soft group-hover:shadow-lift group-hover:-translate-y-1 transition duration-300">
+              ${cover}
+              <span class="absolute z-10 bottom-4 left-4 rounded-full bg-paper/90 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[.14em] font-bold text-chocolate">${escapeHtml(item.category)}</span>
+            </div>
+            <div class="pt-4 px-1">
+              <p class="text-[10px] uppercase tracking-[.18em] text-rose-deep font-bold">MINI POPET</p>
+              <h3 class="font-serif text-2xl font-bold text-chocolate mt-1">${escapeHtml(item.name)}</h3>
+              <p class="text-xs text-ink/60 mt-1">Abrir catálogo en Google Drive ↗</p>
+            </div>
+          </a>
+        </article>`;
+    }
+
+    function renderChips() {
+      const categories = [...new Set(catalogs.map(c => c.category).filter(Boolean))];
+      const buttons = [
+        `<button class="chip shrink-0 rounded-full border border-rose-deep/30 bg-paper px-4 py-2 text-xs font-bold text-chocolate transition" aria-pressed="${activeFilter === 'all'}" data-filter="all">Todos</button>`,
+        ...categories.map(category => {
+          const slug = normalize(category);
+          return `<button class="chip shrink-0 rounded-full border border-rose-deep/30 bg-paper px-4 py-2 text-xs font-bold text-chocolate transition" aria-pressed="${activeFilter === slug}" data-filter="${escapeHtml(slug)}">${escapeHtml(category)}</button>`;
+        })
+      ];
+
+      chips.innerHTML = buttons.join('');
+      chips.querySelectorAll('.chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          activeFilter = chip.dataset.filter;
+          renderChips();
+          renderCatalogs();
+        });
+      });
+    }
+
+    function renderCatalogs() {
+      const visible = activeFilter === 'all'
+        ? catalogs
+        : catalogs.filter(item => normalize(item.category) === activeFilter);
+
+      rail.innerHTML = visible.map(cardTemplate).join('');
+      emptyState.classList.toggle('hidden', visible.length !== 0);
+      catalogCount.textContent = `${catalogs.length} catálogo${catalogs.length === 1 ? '' : 's'} disponible${catalogs.length === 1 ? '' : 's'}`;
+      rail.scrollTo({ left: 0, behavior: 'smooth' });
+    }
 
     function scrollCatalogs(direction) {
-      const card = rail.querySelector('.catalog-card:not(.hidden)');
+      const card = rail.querySelector('.catalog-card');
       const amount = card ? card.getBoundingClientRect().width + 20 : 300;
       rail.scrollBy({ left: direction * amount * 2, behavior: 'smooth' });
     }
 
-    document.querySelectorAll('.chip').forEach(chip => {
-      chip.addEventListener('click', () => {
-        document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed','false'));
-        chip.setAttribute('aria-pressed','true');
+    async function loadCatalogs() {
+      try {
+        const response = await fetch(SHEET_CSV_URL, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-        const filter = chip.dataset.filter;
-        let visible = 0;
+        const csv = await response.text();
+        const rows = parseCSV(csv);
+        if (rows.length < 2) throw new Error('La hoja no tiene filas de catálogo.');
 
-        document.querySelectorAll('.catalog-card').forEach(card => {
-          const show = filter === 'all' || card.dataset.category === filter;
-          card.classList.toggle('hidden', !show);
-          if (show) visible++;
-        });
+        const headers = rows[0].map(h => normalize(h));
+        const idx = name => headers.indexOf(normalize(name));
 
-        document.getElementById('emptyState').classList.toggle('hidden', visible !== 0);
-        rail.scrollTo({ left: 0, behavior: 'smooth' });
-      });
-    });
+        catalogs = rows.slice(1).map(row => ({
+          active: row[idx('Activo')] ?? '',
+          name: row[idx('Nombre')] ?? '',
+          category: row[idx('Categoria')] ?? '',
+          url: row[idx('CatalogoURL')] ?? '',
+          cover: row[idx('PortadaURL (opcional)')] ?? '',
+          order: Number(row[idx('Orden')] || 9999)
+        }))
+        .filter(item => isActive(item.active) && item.name && item.url)
+        .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name, 'es'));
+
+        cmsError.classList.add('hidden');
+        renderChips();
+        renderCatalogs();
+      } catch (error) {
+        console.error('MINI POPET CMS:', error);
+        rail.innerHTML = '';
+        chips.innerHTML = '';
+        catalogCount.textContent = 'Catálogos';
+        cmsError.classList.remove('hidden');
+      }
+    }
+
+    loadCatalogs();
   </script>
 </body>
 </html>

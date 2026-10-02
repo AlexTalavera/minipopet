@@ -1,7 +1,17 @@
-MINI POPET · enlaces corregidos
+MINI POPET · versión CMS con Google Sheets
 
-- Los 11 catálogos son enlaces HTML directos a Google Drive.
-- Los botones de WhatsApp son enlaces HTML directos.
-- No hay previsualización de PDFs.
-- Drive y WhatsApp ya no dependen de JavaScript.
-- JavaScript se usa únicamente para filtros y movimiento del carrusel.
+Google Sheet:
+https://docs.google.com/spreadsheets/d/1RogWOGtiuuCcwxli2sgLfREsmUvltF7b4G4OuWZ0j5k/edit
+
+La página obtiene los catálogos desde la pestaña "Catalogos".
+
+IMPORTANTE:
+Para que Vercel pueda leer la hoja, el archivo debe configurarse como:
+Compartir > Acceso general > Cualquier persona con el enlace > Lector
+
+Columnas esperadas:
+Activo | Nombre | Categoria | CatalogoURL | PortadaURL (opcional) | Orden
+
+Si PortadaURL está vacía o la imagen falla, la página crea una portada visual automática.
+Las categorías se generan automáticamente.
+Los catálogos inactivos no se muestran.
