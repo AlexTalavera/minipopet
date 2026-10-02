@@ -103,7 +103,7 @@
           <div>
             <span id="catalogCount" class="text-[10px] sm:text-xs uppercase tracking-[.2em] text-rose-deep font-bold">Cargando catálogos…</span>
             <h2 class="font-serif text-4xl sm:text-5xl font-bold text-chocolate mt-1">Encuentra tu catálogo</h2>
-            <p class="text-sm text-ink/65 mt-3 max-w-xl">Los catálogos se actualizan automáticamente desde MINI POPET CMS. Filtra por categoría y toca una portada para abrirla en Google Drive.</p>
+            <p class="text-sm text-ink/65 mt-3 max-w-xl">Los catálogos se actualizan automáticamente desde MINI POPET CMS. Las portadas pueden venir de Price Shoes, Google Drive u otra URL de imagen.</p>
           </div>
           <div class="flex gap-2 lg:pb-1">
             <button class="rail-btn w-10 h-10 rounded-full border border-rose-deep/35 bg-paper hover:bg-rose-soft text-chocolate" onclick="scrollCatalogs(-1)" aria-label="Catálogos anteriores">←</button>
@@ -235,6 +235,38 @@
       return ['true','verdadero','1','si','sí','yes','x'].includes(v);
     }
 
+    function normalizeCoverUrl(value = '') {
+      const url = String(value).trim();
+      if (!url) return '';
+
+      try {
+        const parsed = new URL(url);
+
+        // Google Drive: /file/d/FILE_ID/view...
+        if (parsed.hostname.includes('drive.google.com')) {
+          const fileMatch = parsed.pathname.match(/\/file\/d\/([^/]+)/);
+          if (fileMatch && fileMatch[1]) {
+            return `https://drive.google.com/uc?export=view&id=${fileMatch[1]}`;
+          }
+
+          // Google Drive: open?id=FILE_ID or uc?id=FILE_ID
+          const id = parsed.searchParams.get('id');
+          if (id) {
+            return `https://drive.google.com/uc?export=view&id=${id}`;
+          }
+        }
+
+        // Any normal http/https image URL can be attempted directly.
+        if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+          return url;
+        }
+      } catch (e) {
+        console.warn('PortadaURL inválida:', value);
+      }
+
+      return '';
+    }
+
     function coverFallback(name, category) {
       const initials = name.split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
       return `
@@ -246,8 +278,9 @@
     }
 
     function cardTemplate(item) {
-      const cover = item.cover
-        ? `<img src="${escapeHtml(item.cover)}" alt="Portada ${escapeHtml(item.name)}" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')" />
+      const coverUrl = normalizeCoverUrl(item.cover);
+      const cover = coverUrl
+        ? `<img src="${escapeHtml(coverUrl)}" alt="Portada ${escapeHtml(item.name)}" class="w-full h-full object-cover" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')" />
            <div class="hidden w-full h-full">${coverFallback(item.name, item.category)}</div>`
         : coverFallback(item.name, item.category);
 

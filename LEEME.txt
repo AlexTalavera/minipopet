@@ -1,17 +1,22 @@
-MINI POPET · versión CMS con Google Sheets
+MINI POPET · CMS con portadas flexibles
 
-Google Sheet:
-https://docs.google.com/spreadsheets/d/1RogWOGtiuuCcwxli2sgLfREsmUvltF7b4G4OuWZ0j5k/edit
+La columna "PortadaURL (opcional)" acepta:
 
-La página obtiene los catálogos desde la pestaña "Catalogos".
+1. Una URL directa de imagen:
+   https://sitio.com/portada.jpg
+   https://sitio.com/imagen.webp
 
-IMPORTANTE:
-Para que Vercel pueda leer la hoja, el archivo debe configurarse como:
-Compartir > Acceso general > Cualquier persona con el enlace > Lector
+2. Un enlace normal de Google Drive a una imagen:
+   https://drive.google.com/file/d/ID_DEL_ARCHIVO/view?usp=drive_link
 
-Columnas esperadas:
-Activo | Nombre | Categoria | CatalogoURL | PortadaURL (opcional) | Orden
+La web detecta automáticamente los links de Google Drive y los transforma para mostrarlos como imagen.
 
-Si PortadaURL está vacía o la imagen falla, la página crea una portada visual automática.
-Las categorías se generan automáticamente.
-Los catálogos inactivos no se muestran.
+Si la URL:
+- está vacía,
+- está mal formada,
+- o el sitio externo bloquea la imagen,
+
+la web muestra automáticamente una portada de respaldo de MINI POPET.
+
+No hay que modificar el HTML para agregar, quitar o cambiar catálogos.
+Todo se administra desde Google Sheets.
