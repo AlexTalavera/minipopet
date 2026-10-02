@@ -103,7 +103,7 @@
           <div>
             <span id="catalogCount" class="text-[10px] sm:text-xs uppercase tracking-[.2em] text-rose-deep font-bold">Cargando catálogos…</span>
             <h2 class="font-serif text-4xl sm:text-5xl font-bold text-chocolate mt-1">Encuentra tu catálogo</h2>
-            <p class="text-sm text-ink/65 mt-3 max-w-xl">Los catálogos se actualizan automáticamente desde MINI POPET CMS. Las portadas pueden venir de Price Shoes, Google Drive u otra URL de imagen.</p>
+            <p class="text-sm text-ink/65 mt-3 max-w-xl">Los catálogos se actualizan automáticamente desde MINI POPET CMS. Conservamos las portadas actuales y, si agregas una PortadaURL, esa imagen tendrá prioridad.</p>
           </div>
           <div class="flex gap-2 lg:pb-1">
             <button class="rail-btn w-10 h-10 rounded-full border border-rose-deep/35 bg-paper hover:bg-rose-soft text-chocolate" onclick="scrollCatalogs(-1)" aria-label="Catálogos anteriores">←</button>
@@ -235,6 +235,20 @@
       return ['true','verdadero','1','si','sí','yes','x'].includes(v);
     }
 
+    const LOCAL_COVERS = {
+      "Perfumes Árabes · Mujer": "./catalogos/portadas/arabes-mujer.jpg",
+      "Perfumes Árabes · Hombre": "./catalogos/portadas/arabes-hombre.jpg",
+      "Perfumes de Diseñador · Mujer": "./catalogos/portadas/disenador-mujer.jpg",
+      "Perfumes de Diseñador · Hombre": "./catalogos/portadas/disenador-hombre.jpg",
+      "Sandalias 2026": "./catalogos/portadas/sandalias.jpg",
+      "Botas Otoño / Invierno 2026-27": "./catalogos/portadas/botas.jpg",
+      "Urbano Otoño / Invierno 2026": "./catalogos/portadas/urbano.jpg",
+      "Importados Fall 2026": "./catalogos/portadas/importados.jpg",
+      "Vestir Casual 25-26": "./catalogos/portadas/vestir-casual.jpg",
+      "Todo en Uno 2026": "./catalogos/portadas/todo-en-uno.jpg",
+      "Escolar 2026": "./catalogos/portadas/escolar.jpg"
+    };
+
     function normalizeCoverUrl(value = '') {
       const url = String(value).trim();
       if (!url) return '';
@@ -267,6 +281,13 @@
       return '';
     }
 
+    function resolveCoverUrl(item) {
+      const cmsCover = normalizeCoverUrl(item.cover);
+      if (cmsCover) return cmsCover;
+
+      return LOCAL_COVERS[item.name] || '';
+    }
+
     function coverFallback(name, category) {
       const initials = name.split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
       return `
@@ -278,9 +299,12 @@
     }
 
     function cardTemplate(item) {
-      const coverUrl = normalizeCoverUrl(item.cover);
+      const coverUrl = resolveCoverUrl(item);
+      const isLocalCover = coverUrl.startsWith('./catalogos/portadas/');
+      const referrerAttr = isLocalCover ? '' : ' referrerpolicy="no-referrer"';
+
       const cover = coverUrl
-        ? `<img src="${escapeHtml(coverUrl)}" alt="Portada ${escapeHtml(item.name)}" class="w-full h-full object-cover" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')" />
+        ? `<img src="${escapeHtml(coverUrl)}" alt="Portada ${escapeHtml(item.name)}" class="w-full h-full object-cover" loading="lazy"${referrerAttr} onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')" />
            <div class="hidden w-full h-full">${coverFallback(item.name, item.category)}</div>`
         : coverFallback(item.name, item.category);
 
